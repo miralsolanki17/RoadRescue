@@ -80,4 +80,71 @@ body {
     background:#1a202c;
     transform:scale(1.05);
 }
+.hero{
+    width:99%;
+    margin:80px auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:80vh;
+    background-color: #FFF5F5;
+}
 
+.hero-text{
+    width:50%;
+}
+
+.hero-text h1{
+    font-size:60px;
+    color:#1f2937;
+    margin-bottom:20px;
+    line-height:1.2;
+}
+
+.hero-text p{
+    font-size:20px;
+    color:#6b7280;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+.hero-btns{
+    display:flex;
+    gap:20px;
+}
+.help-btn{
+    padding:14px 30px;
+    border:2px solid #eb2528;
+    background:white;
+    color:#2563eb;
+    border-radius:40px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.learn-btn{
+    padding:14px 30px;
+    border:2px solid #2563eb;
+    background:white;
+    color:#2563eb;
+    border-radius:40px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.learn-btn:hover{
+    background:#2563eb;
+    color:white;
+}
+
+.hero-image{
+    width:45%;
+}
+
+.hero-image img{
+    width:100%;
+}
