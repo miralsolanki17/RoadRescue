@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RoadRescue</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 </head>
 
 <body>
@@ -15,10 +16,10 @@
         </div>
         <div class="menu">
             <ul>
-                <li><a href="Home">Home</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">How it Works</a></li>
-                <li><a href="#">About Us</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#how-it-works">How it Works</a></li>
+                <li><a href="#contact">About Us</a></li>
 
             </ul>
         </div>
@@ -26,7 +27,7 @@
             <button class="login">Login</button>
         </div>
     </nav>
-    <section class="hero">
+    <section class="hero" id="home" data-aos="fade-up">
         <div class="hero-text">
             <h1>Roadside Assistance <br> Anytime, Anywhere.</h1>
 
@@ -48,7 +49,7 @@
             </div>
         </div>
     </section>
-    <section class="services">
+    <section class="services" id="services" data-aos="fade-up">
 
     <h4>OUR SERVICES</h4>
     <h2>Emergency Roadside Assistance</h2>
@@ -59,25 +60,25 @@
 
     <div class="service-container">
 
-        <div class="card">
+        <div class="card" data-aos="zoom-in">
             <div class="icon">🛞</div>
             <h3>Flat Tire Repair</h3>
             <p>Quick tire replacement and puncture repair to get you back on the road safely.</p>
         </div>
 
-        <div class="card">
+        <div class="card" data-aos="zoom-in">
             <div class="icon">🔋</div>
             <h3>Battery Jump Start</h3>
             <p>Dead battery? Our experts provide instant jump-start assistance anytime.</p>
         </div>
 
-        <div class="card">
+        <div class="card" data-aos="zoom-in">
             <div class="icon">⛽</div>
             <h3>Fuel Delivery</h3>
             <p>Run out of fuel? We'll deliver fuel directly to your current location.</p>
         </div>
 
-        <div class="card">
+        <div class="card" data-aos="zoom-in">
             <div class="icon">🔧</div>
             <h3>Engine Assistance</h3>
             <p>Emergency mechanical support for minor engine issues and roadside repairs.</p>
@@ -86,7 +87,7 @@
     </div>
 
 </section>
-<section class="how-it-works">
+<section class="how-it-works" id="how-it-works" data-aos="flip-left">
 
     <h4>HOW IT WORKS</h4>
     <h2>Get Help in 4 Simple Steps</h2>
@@ -131,7 +132,7 @@
     </div>
 
 </section>
-<footer>
+<footer id="contact"  data-aos="fade-up">
 
     <div class="footer-container">
 
@@ -176,6 +177,12 @@
     </p>
 
 </footer>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
+<script src="script.js"></script>
 </body>
 
 </html>
