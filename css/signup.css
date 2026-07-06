@@ -157,6 +157,90 @@ form select:focus {
     text-decoration: underline;
 }
 
+/* Toast Notifications */
+
+.toast-container {
+    position: fixed;
+    top: 95px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 1500;
+    pointer-events: none;
+}
+
+.toast {
+    min-width: 280px;
+    max-width: 340px;
+    padding: 16px 18px;
+    border-radius: 16px;
+    box-shadow: 0 18px 42px rgba(15, 23, 42, 0.18);
+    color: white;
+    font-weight: 600;
+    pointer-events: auto;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    opacity: 0;
+    transform: translateX(18px);
+    animation: slideIn 280ms ease forwards;
+}
+
+.toast.toast-success {
+    background: linear-gradient(135deg, #16a34a 0%, #0f8d3a 100%);
+}
+
+.toast.toast-error {
+    background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+}
+
+.toast.toast-warning {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+}
+
+.toast span.message {
+    flex: 1;
+    font-size: 15px;
+    line-height: 1.4;
+    color: white;
+}
+
+.toast .close-btn {
+    border: none;
+    background: rgba(255,255,255,0.22);
+    color: white;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    transition: transform 0.2s ease;
+}
+
+.toast .close-btn:hover {
+    transform: scale(1.05);
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(18px);
+    }
+}
+
 /* Responsive */
 
 @media (max-width: 768px) {

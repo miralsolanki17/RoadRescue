@@ -1,3 +1,32 @@
+// Toast helper
+function showToast(type, message) {
+    const toastContainer = document.getElementById("toastContainer");
+    if (!toastContainer) return;
+
+    const toast = document.createElement("div");
+    toast.className = `toast toast-${type}`;
+    toast.innerHTML = `
+        <span class="message">${message}</span>
+        <button type="button" class="close-btn" aria-label="Dismiss notification">×</button>
+    `;
+
+    const closeBtn = toast.querySelector(".close-btn");
+    closeBtn.addEventListener("click", () => removeToast(toast));
+
+    toastContainer.appendChild(toast);
+
+    setTimeout(() => removeToast(toast), 4200);
+}
+
+function removeToast(toast) {
+    toast.style.animation = "slideOut 200ms ease forwards";
+    toast.addEventListener("animationend", () => {
+        if (toast.parentNode) {
+            toast.parentNode.removeChild(toast);
+        }
+    });
+}
+
 // Select Form
 const signupForm = document.getElementById("signupForm");
 
@@ -15,44 +44,45 @@ signupForm.addEventListener("submit", function (e) {
 
     // Full Name Validation
     if (name === "") {
-        alert("Please enter your full name.");
+        showToast("warning", "Please enter your full name.");
         return;
     }
 
     // Mobile Number Validation
     if (phone.length !== 10 || isNaN(phone)) {
-        alert("Please enter a valid 10-digit mobile number.");
+        showToast("warning", "Please enter a valid 10-digit mobile number.");
         return;
     }
 
     // Vehicle Type Validation
     if (vehicle === "") {
-        alert("Please select your vehicle type.");
+        showToast("warning", "Please select your vehicle type.");
         return;
     }
 
     // Vehicle Number Validation
     if (vehicleNo === "") {
-        alert("Please enter your vehicle number.");
+        showToast("warning", "Please enter your vehicle number.");
         return;
     }
 
     // Password Validation
     if (password.length < 6) {
-        alert("Password must be at least 6 characters.");
+        showToast("warning", "Password must be at least 6 characters.");
         return;
     }
 
     // Confirm Password Validation
     if (password !== confirmPassword) {
-        alert("Passwords do not match.");
+        showToast("error", "Passwords do not match.");
         return;
     }
 
     // Success
-    alert("Account Created Successfully!");
+    showToast("success", "Account created successfully!");
 
-    // Redirect to Login Page
-    window.location.href = "login.html";
+    setTimeout(() => {
+        window.location.href = "login.html";
+    }, 1200);
 
 });
