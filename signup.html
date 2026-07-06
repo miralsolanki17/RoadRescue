@@ -1,14 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Create Account | RoadRescue</title>
+
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/signup.css">
 </head>
+
 <body>
-    
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/Logo.png" alt="RoadRescue Logo">
+            </a>
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="button">
+            <a href="login.html" class="login">Login</a>
+        </div>
+
+    </nav>
+
+    <!-- ================= SIGNUP SECTION ================= -->
+
+    <section class="signup-section">
+
+        <!-- Background Illustration -->
+
+        <img src="images/login-illustration.png"
+             alt="Roadside Assistance"
+             class="bg-image">
+
+        <!-- Signup Card -->
+
+        <div class="signup-card">
+
+            <h1>Create Account 🚗</h1>
+
+            <p>
+                Join RoadRescue and get fast, reliable roadside assistance
+                whenever you need it.
+            </p>
+
+            <form id="signupForm">
+
+                <!-- Full Name -->
+
+                <label>Full Name</label>
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your full name"
+                    required>
+
+                <!-- Mobile Number -->
+
+                <label>Mobile Number</label>
+
+                <div class="phone-input">
+
+                    <span>+91</span>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        maxlength="10"
+                        placeholder="Enter Mobile Number"
+                        required>
+
+                </div>
+
+                <!-- Vehicle Type -->
+
+                <label>Vehicle Type</label>
+
+                <select id="vehicle" required>
+
+                    <option value="">Select Vehicle</option>
+                    <option>Bike</option>
+                    <option>Car</option>
+                    <option>Scooter</option>
+                    <option>Auto Rickshaw</option>
+                    <option>Truck</option>
+
+                </select>
+
+                <!-- Vehicle Number -->
+
+                <label>Vehicle Number</label>
+
+                <input
+                    type="text"
+                    id="vehicleNo"
+                    placeholder="Example: GJ01AB1234"
+                    required>
+
+                <!-- Password -->
+
+                <label>Password</label>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Create Password"
+                    required>
+
+                <!-- Confirm Password -->
+
+                <label>Confirm Password</label>
+
+                <input
+                    type="password"
+                    id="confirmPassword"
+                    placeholder="Confirm Password"
+                    required>
+
+                <button type="submit" class="login-btn">
+
+                    Create Account
+
+                </button>
+
+            </form>
+
+            <p class="signup-link">
+
+                Already have an account?
+
+                <a href="login.html">Login</a>
+
+            </p>
+
+        </div>
+
+    </section>
 
     <script src="js/signup.js"></script>
+
 </body>
+
 </html>

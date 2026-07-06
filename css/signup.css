@@ -1,0 +1,194 @@
+/* ===========================
+   SIGNUP PAGE
+=========================== */
+
+body {
+    background: #FFF5F5;
+}
+
+/* Signup Section */
+
+.signup-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 20px 60px;
+    overflow: hidden;
+}
+
+/* Background Illustration */
+
+.bg-image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 700px;
+    max-width: 50%;
+    opacity: 0.18;
+    pointer-events: none;
+    user-select: none;
+}
+
+/* Signup Card */
+
+.signup-card {
+    width: 100%;
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+    z-index: 2;
+}
+
+/* Heading */
+
+.signup-card h1 {
+    font-size: 34px;
+    color: #1F2937;
+    margin-bottom: 10px;
+}
+
+.signup-card p {
+    color: #6B7280;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+/* Form */
+
+form label {
+    display: block;
+    margin-top: 18px;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #374151;
+}
+
+/* Input */
+
+form input,
+form select {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #E5E7EB;
+    border-radius: 12px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+    background: white;
+}
+
+form input:focus,
+form select:focus {
+    border-color: #DC3545;
+    box-shadow: 0 0 0 4px rgba(220,53,69,0.12);
+}
+
+/* Phone Input */
+
+.phone-input {
+    display: flex;
+    align-items: center;
+    border: 2px solid #E5E7EB;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+    background: white;
+}
+
+.phone-input:focus-within {
+    border-color: #DC3545;
+    box-shadow: 0 0 0 4px rgba(220,53,69,0.12);
+}
+
+.phone-input span {
+    padding: 15px;
+    background: #F9FAFB;
+    border-right: 1px solid #E5E7EB;
+    font-weight: bold;
+    color: #374151;
+}
+
+.phone-input input {
+    border: none;
+    box-shadow: none;
+    margin: 0;
+}
+
+/* Button */
+
+.login-btn {
+    width: 100%;
+    margin-top: 30px;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    background: #DC3545;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background: #C82333;
+    transform: translateY(-2px);
+}
+
+/* Login Link */
+
+.signup-link {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.signup-link a {
+    color: #DC3545;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+    .signup-card {
+        padding: 30px 25px;
+        max-width: 100%;
+    }
+
+    .signup-card h1 {
+        font-size: 28px;
+    }
+
+    .bg-image {
+        width: 400px;
+        opacity: 0.12;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .signup-card {
+        padding: 25px 20px;
+    }
+
+    .signup-card h1 {
+        font-size: 24px;
+    }
+
+    .phone-input span {
+        padding: 14px;
+    }
+
+}
