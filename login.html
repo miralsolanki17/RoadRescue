@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Roadrescue</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/Logo.png" alt="RoadRescue Logo">
+            </a>
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="button">
+            <a href="signup.html" class="login">Sign Up</a>
+        </div>
+    </nav>
+
+
+    <section class="login-section">
+
+        <!-- Background Illustration -->
+
+        <img src="images/login-background.png" alt="Roadside Assistance" class="bg-image">
+
+        <!-- Login Card -->
+
+        <div class="login-card">
+
+            <h1>Welcome Back 👋</h1>
+
+            <p>
+                Enter your mobile number to continue and request roadside
+                assistance anytime, anywhere.
+            </p>
+
+            <!-- Login Form -->
+
+            <form id="loginForm">
+
+                <label>Mobile Number</label>
+
+                <div class="phone-input">
+
+                    <span>+91</span>
+
+                    <input type="tel" id="phone" maxlength="10" placeholder="Enter Mobile Number" required>
+
+                </div>
+
+                <button type="submit" class="login-btn">
+                    Continue
+                </button>
+
+            </form>
+
+            <!-- OTP -->
+
+            <div class="otp-box">
+
+                <h2>Verify OTP</h2>
+
+                <p>
+                    Enter the 6-digit OTP sent to your mobile number.
+                </p>
+
+                <div class="otp-inputs">
+
+                    <input type="text" maxlength="1">
+                    <input type="text" maxlength="1">
+                    <input type="text" maxlength="1">
+                    <input type="text" maxlength="1">
+                    <input type="text" maxlength="1">
+                    <input type="text" maxlength="1">
+
+                </div>
+
+                <p class="resend">
+                    Didn't receive OTP?
+                    <a href="#">Resend OTP</a>
+                </p>
+
+                <button type="button" id="verifyBtn" class="login-btn">
+                    Verify OTP
+                </button>
+
+            </div>
+
+            <p class="signup-link">
+                Don't have an account?
+                <a href="signup.html">Create Account</a>
+            </p>
+
+        </div>
+
+    </section>
+
+    <footer>
+
+        <div class="footer-container">
+
+            <div class="footer-about">
+
+                <h2>🚗 RoadRescue</h2>
+
+                <p>
+
+                    Fast, reliable and trusted roadside assistance anytime,
+                    anywhere.
+
+                </p>
+
+            </div>
+
+            <div class="footer-links">
+
+                <h3>Quick Links</h3>
+
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+
+            </div>
+
+            <div class="footer-contact">
+
+                <h3>Contact</h3>
+
+                <p>📍 Ahmedabad, India</p>
+                <p>📞 +91 9876543210</p>
+                <p>✉ support@roadrescue.com</p>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <p class="copyright">
+
+            © 2026 RoadRescue. All Rights Reserved.
+
+        </p>
+
+    </footer>
+
+    <script src="js/login.js"></script>
+</body>
+
+</html>

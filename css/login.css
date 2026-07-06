@@ -1,0 +1,237 @@
+/* ===========================
+   LOGIN PAGE
+=========================== */
+
+body {
+    background: #FFF5F5;
+}
+
+/* Login Section */
+
+.login-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 20px 60px;
+    overflow: hidden;
+}
+
+/* Background Image */
+
+.bg-image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 700px;
+    max-width: 50%;
+    opacity: 0.18;
+    pointer-events: none;
+    user-select: none;
+}
+
+/* Login Card */
+
+.login-card {
+    width: 100%;
+    max-width: 430px;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    padding: 40px 35px;
+    box-shadow: 0 15px 40px rgba(0,0,0,.12);
+    z-index: 2;
+}
+
+/* Heading */
+
+.login-card h1 {
+    color: #1F2937;
+    font-size: 34px;
+    margin-bottom: 12px;
+}
+
+.login-card p {
+    color: #6B7280;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+/* Labels */
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #374151;
+}
+
+/* Phone Input */
+
+.phone-input {
+    display: flex;
+    align-items: center;
+    border: 2px solid #E5E7EB;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 25px;
+    transition: .3s;
+    background: white;
+}
+
+.phone-input:focus-within {
+    border-color: #DC3545;
+    box-shadow: 0 0 0 4px rgba(220,53,69,.12);
+}
+
+.phone-input span {
+    padding: 16px;
+    background: #F9FAFB;
+    font-weight: bold;
+    color: #374151;
+    border-right: 1px solid #E5E7EB;
+}
+
+.phone-input input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 16px;
+    font-size: 16px;
+    background: transparent;
+}
+
+/* Button */
+
+.login-btn {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 12px;
+    background: #DC3545;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.login-btn:hover {
+    background: #C82333;
+    transform: translateY(-2px);
+}
+
+/* OTP Section */
+
+.otp-box {
+    display: none;
+    margin-top: 35px;
+}
+
+.otp-box h2 {
+    color: #1F2937;
+    margin-bottom: 10px;
+}
+
+.otp-inputs {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 25px 0;
+}
+
+.otp-inputs input {
+    width: 52px;
+    height: 58px;
+    border: 2px solid #E5E7EB;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    outline: none;
+    transition: .3s;
+}
+
+.otp-inputs input:focus {
+    border-color: #DC3545;
+}
+
+/* Resend */
+
+.resend {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.resend a {
+    color: #DC3545;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.resend a:hover {
+    text-decoration: underline;
+}
+
+/* Signup */
+
+.signup-link {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.signup-link a {
+    color: #DC3545;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:900px){
+
+    .bg-image{
+        width:500px;
+        opacity:.12;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .login-card{
+        max-width:100%;
+        padding:35px 25px;
+    }
+
+    .bg-image{
+        width:380px;
+        opacity:.10;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .login-card h1{
+        font-size:28px;
+    }
+
+    .otp-inputs input{
+        width:42px;
+        height:48px;
+        font-size:18px;
+    }
+
+    .phone-input span{
+        padding:14px;
+    }
+
+}
