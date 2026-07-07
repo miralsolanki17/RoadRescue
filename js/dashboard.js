@@ -64,6 +64,6 @@ const requestBtn = document.querySelector(".request-btn");
 
 requestBtn.addEventListener("click", function () {
 
-    window.location.href = "request-help.html";
+    window.location.href = "request.html";
 
 });

@@ -14,31 +14,37 @@ learnBtn.addEventListener("click", function () {
     });
 });
 
-const helpBtn = document.querySelector(".help-btn");
+const requestHelpBtn = document.getElementById("requestHelpBtn");
 
-helpBtn.addEventListener("click", getLocation);
+requestHelpBtn.addEventListener("click", () => {
+    window.location.href = "request.html";
+});
 
-function getLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(success, error);
-    } else {
-        alert("Geolocation is not supported by this browser.");
-    }
-}
+// const helpBtn = document.querySelector(".help-btn");
 
-function success(position) {
-    const latitude = position.coords.latitude;
-    const longitude = position.coords.longitude;
+// helpBtn.addEventListener("click", getLocation);
 
-    alert("Location found");
+// function getLocation() {
+//     if (navigator.geolocation) {
+//         navigator.geolocation.getCurrentPosition(success, error);
+//     } else {
+//         alert("Geolocation is not supported by this browser.");
+//     }
+// }
 
-    console.log(latitude);
-    console.log(longitude);
-}
+// function success(position) {
+//     const latitude = position.coords.latitude;
+//     const longitude = position.coords.longitude;
 
-function error() {
-    alert("Location permission denied");
-}
+//     alert("Location found");
+
+//     console.log(latitude);
+//     console.log(longitude);
+// }
+
+// function error() {
+//     alert("Location permission denied");
+// }
 
 const sections = document.querySelectorAll("section, footer");
 const navLinks = document.querySelectorAll(".menu a");
